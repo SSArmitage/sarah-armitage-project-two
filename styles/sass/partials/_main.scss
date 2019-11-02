@@ -1,0 +1,104 @@
+// SECTION1 STYLES
+.section1 {
+    background-color: $primary;
+    padding-bottom: 80px;
+    padding-top: 270px;
+    .flexContainer {
+        display: flex;
+    }
+}
+
+.section1 {
+    .infoContainer {
+    width: 70%;
+    padding-right: 50px;
+    p {
+        margin: 20px 0 40px 0;
+    }
+    button {
+        background-color: $secondary;
+        color: $white;
+    }
+}
+}
+
+.section1 {
+    .imageContainer {
+    width: 30%;
+    object-fit: cover;
+    // box-shadow: -16px 16px $accent;
+    }
+    img {
+        box-shadow: -16px 16px $accent;
+    }
+    .headingTwoA {
+        color: $secondary;
+    }
+}
+// SECTION2 STYLES
+.section2 {
+    background-color: $secondary;
+    padding: 80px 0;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+            width: 30%;
+            flex: 0 1 auto;
+            &:nth-of-type(2) {
+                margin: 0 20px;
+            }
+        }
+
+    }
+}
+
+// SECTION3 STYLES
+.section3 {
+    background-color: $primary;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            width: 50%;
+            padding: 20px;
+            position: relative;
+        }
+    }
+    .headingTwoA {
+        color: $secondary;
+    }
+    .iconContainer {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        @include flexCenter;
+        background-color: $accent;
+        i {
+        color: $white;
+        }
+    }
+    .infoContainer {
+        li {
+            display: flex;
+        }
+    }
+
+    // ul li:nth-of-type(1):before {    
+    // font-family: 'FontAwesome';
+    // content: '\f274';
+    // position: absolute;
+    // width: 30px;
+    // height: 30px;
+    // left: -25px;
+    // top: 35px;
+    // font-size: 3.4rem;
+    // color: $white;
+    // border-radius: 50%;
+    // background-color: $accent;
+
+}
+
+// SECTION4 STYLES
+// SECTION5 STYLES

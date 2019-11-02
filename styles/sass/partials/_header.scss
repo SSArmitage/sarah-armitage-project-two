@@ -1,0 +1,52 @@
+header {
+    background-image: url(../assets/header-home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    // max-width: 1280px;
+    background-attachment: fixed;
+}
+
+header h1 {
+    font-family: $fontOne;
+    color: $secondary;
+    font-weight: normal;
+    font-size: 5.8rem;
+    line-height: 6.8rem; 
+    margin-top: 80px;
+}
+
+header {
+    padding-top: 40px;
+    nav {
+        // width: 45%;
+        width: 37%;
+        ul {
+            display: flex;
+            justify-content: space-between
+        }
+    }
+}
+
+header {
+    position: relative;
+    .imageContainer {
+        // width: 90%;
+        // width: 60%;
+        // width: 55%;
+        width: 57%;
+        // width: 200px;
+        // width: max-content;
+        position: absolute;
+        left: 0;
+        // bottom: -250px;
+        bottom: -226px;
+    }
+}
+
+
+.headerTop {
+    display: flex;
+    justify-content: space-between
+}

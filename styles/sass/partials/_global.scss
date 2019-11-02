@@ -1,0 +1,80 @@
+// REMOVE DEFAULTS
+body, h1, h2, h3, p, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+ul, li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+    border: none;
+}
+
+fieldset {
+    border: none;
+}
+
+// GENERAL STYLES
+html {
+	font-size: 62.5%;
+}
+
+body {
+    // arguments = (fontSize, fontFamily, color, fontWeight, lineHeight, letterSpacing)
+    @include fontStyle (2.0rem, $fontTwo, normal, 2.8rem, 0.2rem);
+}
+
+.logo {
+    @include fontStyle (3.0rem, $fontOne, normal, 2.4rem, 0.17rem);
+}
+
+button {
+    @include fontStyle (2.7rem, $fontOne, normal, 3.2rem, 0.14rem);
+}
+
+nav {
+    @include fontStyle (2.0rem, $fontTwo, bold, 2.9rem, 0.14rem);
+}
+
+// h2-versionA
+.headingTwoA {
+    @include fontStyle (4.3rem, $fontOne, normal, 5.8rem, 0.27rem);
+}
+
+// h2-versionB
+.headingTwoB {
+    @include fontStyle (4.0rem, $fontOne, normal, 5.8rem, 0.25rem);
+}
+
+.wrapper {
+    // max-width: 980px;
+    max-width: 1280px;
+    width: 80%;
+	margin: 0 auto;
+}
+
+img {
+    // max-width: 100%;
+    width: 100%;
+	display: block;
+}
+
+nav a {
+    color: $secondary;
+    text-transform: uppercase;
+}
+
+button {
+    padding: 10px 40px;
+    
+}
+
+.lineBreak {
+    display: block;
+}
