@@ -1,10 +1,11 @@
 // SECTION1 STYLES
 .section1 {
     background-color: $primary;
-    padding-bottom: 80px;
-    padding-top: 270px;
+    padding-bottom: 115px;
+    padding-top: 265px;
     .flexContainer {
         display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -12,6 +13,7 @@
     .infoContainer {
     width: 70%;
     padding-right: 50px;
+    padding-top: 50px;
     p {
         margin: 20px 0 40px 0;
     }
@@ -24,12 +26,12 @@
 
 .section1 {
     .imageContainer {
-    width: 30%;
+    // width: 30%;
     object-fit: cover;
     // box-shadow: -16px 16px $accent;
     }
     img {
-        box-shadow: -16px 16px $accent;
+        box-shadow: -20px 22px $accent;
     }
     .headingTwoA {
         color: $secondary;
@@ -38,15 +40,15 @@
 // SECTION2 STYLES
 .section2 {
     background-color: $secondary;
-    padding: 80px 0;
+    padding: 100px 0;
     ul {
         display: flex;
         justify-content: space-between;
         li {
-            width: 30%;
-            flex: 0 1 auto;
+            // width: 30%;
+            flex: 1 1 auto;
             &:nth-of-type(2) {
-                margin: 0 20px;
+                margin: 0 35px;
             }
         }
 
@@ -56,22 +58,26 @@
 // SECTION3 STYLES
 .section3 {
     background-color: $primary;
+    padding: 62px 0;
     ul {
         display: flex;
         flex-wrap: wrap;
         li {
             width: 50%;
-            padding: 20px;
-            position: relative;
+            padding: 30px 20px;
+            display: flex;
         }
     }
     .headingTwoA {
         color: $secondary;
     }
     .iconContainer {
-        display: inline-block;
-        width: 35px;
-        height: 35px;
+        padding: 10px 20px 0 0;
+    }
+    .icon {
+        font-size: 2.8rem;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         @include flexCenter;
         background-color: $accent;
@@ -83,22 +89,183 @@
         li {
             display: flex;
         }
+        p {
+            margin-top: 20px;
+        }
     }
-
-    // ul li:nth-of-type(1):before {    
-    // font-family: 'FontAwesome';
-    // content: '\f274';
-    // position: absolute;
-    // width: 30px;
-    // height: 30px;
-    // left: -25px;
-    // top: 35px;
-    // font-size: 3.4rem;
-    // color: $white;
-    // border-radius: 50%;
-    // background-color: $accent;
-
 }
 
 // SECTION4 STYLES
+// .section4a,
+// .section4b {
+//     background-color: $secondary;
+//     position: relative;
+//     h2, p {
+//         color: $white;
+//     }
+//     p {
+//         margin: 20px 0;
+//     }
+//     button {
+//         background-color: $primary;
+//         color: $secondary;
+//         // margin: 20px 0;
+//     }
+//     .box {
+//         width: 50%;
+//     }
+// }
+
+// .section4a {
+//     .flexContainer {
+//         display: flex;
+//         justify-content: start;
+//     }
+//     .imageContainer {
+//         position: absolute;
+//         left: 0;
+//         top: -55px;
+//         bottom: 0;
+//     }
+//     img {
+//         box-shadow: 20px 22px $accent;
+//     }
+//     .box {
+//         padding: 80px 0 80px 120px;
+//     }
+// }
+
+// .section4b {
+//     text-align: right;
+//     .flexContainer {
+//         display: flex;
+//     }
+//     .imageContainer {
+//         position: absolute;
+//         right: 0;
+//         top: 0;
+//         bottom: 0;
+//     }
+//     img {
+//         box-shadow: -20px 22px $accent; 
+//     }
+//     .box {
+//         padding: 80px 120px;
+//     }
+// }
+
+// BACKGROUND VERSION
+.section4a,
+.section4b {
+    // border: 1px solid red;
+    background-color: $secondary;
+    position: relative;
+    h2, p {
+        color: $white;
+    }
+    p {
+        margin: 20px 0;
+    }
+    button {
+        background-color: $primary;
+        color: $secondary;
+    }
+    // .box {
+    //     width: 50%;
+    // }
+    .box {
+        // padding: 80px 0 80px 120px;
+        padding: 80px 0;
+    }
+}    
+
+.section4a {
+    position: relative;
+    // background-color: $secondary;
+    .flexContainer {
+        display: flex;
+        justify-content: end;
+    }
+    .box {
+        padding-left: 50px;
+    }
+}
+
+.section4b {
+    position: relative;
+    .flexContainer {
+        display: flex;
+        text-align: right;
+    }
+    .box {
+        padding-right: 50px;
+    }
+}
+
+.section4a .box,
+.section4b .box {
+    width: 50%;
+}
+
+.section4a::before {
+    content: '';
+    // width: 50%;
+    width: calc(50% - 50px);
+    background-image: url(../assets/left-image.jpg);
+    background-size: cover;
+    position: absolute;
+    top: -60px;
+    bottom: 60px;
+    left: 0;
+    box-shadow: 20px 22px $accent;
+    // padding-right: 50px;
+}
+
+.section4b::after {
+    content: '';
+    // width: 50%;
+    width: calc(50% - 50px);
+    background-image: url(../assets/right-image.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 60px;
+    bottom: -60px;
+    right: 0;
+    box-shadow: -20px 22px $accent;
+}
+
 // SECTION5 STYLES
+
+.section5a {
+    background-image: url(../assets/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    max-height: 550px;
+}
+
+.section5b {
+    background-color: $primary;
+    padding: 250px 0;
+    text-align: center;
+    h2, p {
+        color: $secondary;
+    }
+    p {
+        margin: 20px 0;
+    }
+    button {
+        background-color: $secondary;
+        color: $white;
+        margin: 45px 0;
+    }
+}
+
+// FOOTER STYLES
+footer {
+    background-color: $blackTwo;
+    color: $white;
+    text-align: center;
+    padding: 10px 0;
+}

@@ -333,19 +333,23 @@ header .imageContainer {
 
 .section1 {
   background-color: #CCEDFB;
-  padding-bottom: 80px;
-  padding-top: 270px;
+  padding-bottom: 115px;
+  padding-top: 265px;
 }
 
 .section1 .flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .section1 .infoContainer {
   width: 70%;
   padding-right: 50px;
+  padding-top: 50px;
 }
 
 .section1 .infoContainer p {
@@ -358,14 +362,13 @@ header .imageContainer {
 }
 
 .section1 .imageContainer {
-  width: 30%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .section1 img {
-  -webkit-box-shadow: -16px 16px #0CADC0;
-          box-shadow: -16px 16px #0CADC0;
+  -webkit-box-shadow: -20px 22px #0CADC0;
+          box-shadow: -20px 22px #0CADC0;
 }
 
 .section1 .headingTwoA {
@@ -374,7 +377,7 @@ header .imageContainer {
 
 .section2 {
   background-color: #1A315C;
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .section2 ul {
@@ -387,18 +390,18 @@ header .imageContainer {
 }
 
 .section2 ul li {
-  width: 30%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .section2 ul li:nth-of-type(2) {
-  margin: 0 20px;
+  margin: 0 35px;
 }
 
 .section3 {
   background-color: #CCEDFB;
+  padding: 62px 0;
 }
 
 .section3 ul {
@@ -411,8 +414,10 @@ header .imageContainer {
 
 .section3 ul li {
   width: 50%;
-  padding: 20px;
-  position: relative;
+  padding: 30px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .section3 .headingTwoA {
@@ -420,9 +425,13 @@ header .imageContainer {
 }
 
 .section3 .iconContainer {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
+  padding: 10px 20px 0 0;
+}
+
+.section3 .icon {
+  font-size: 2.8rem;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -436,7 +445,7 @@ header .imageContainer {
   background-color: #0CADC0;
 }
 
-.section3 .iconContainer i {
+.section3 .icon i {
   color: #FFFFFF;
 }
 
@@ -444,4 +453,135 @@ header .imageContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.section3 .infoContainer p {
+  margin-top: 20px;
+}
+
+.section4a,
+.section4b {
+  background-color: #1A315C;
+  position: relative;
+}
+
+.section4a h2, .section4a p,
+.section4b h2,
+.section4b p {
+  color: #FFFFFF;
+}
+
+.section4a p,
+.section4b p {
+  margin: 20px 0;
+}
+
+.section4a button,
+.section4b button {
+  background-color: #CCEDFB;
+  color: #1A315C;
+}
+
+.section4a .box,
+.section4b .box {
+  padding: 80px 0;
+}
+
+.section4a {
+  position: relative;
+}
+
+.section4a .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.section4a .box {
+  padding-left: 50px;
+}
+
+.section4b {
+  position: relative;
+}
+
+.section4b .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: right;
+}
+
+.section4b .box {
+  padding-right: 50px;
+}
+
+.section4a .box,
+.section4b .box {
+  width: 50%;
+}
+
+.section4a::before {
+  content: '';
+  width: calc(50% - 50px);
+  background-image: url(../assets/left-image.jpg);
+  background-size: cover;
+  position: absolute;
+  top: -60px;
+  bottom: 60px;
+  left: 0;
+  -webkit-box-shadow: 20px 22px #0CADC0;
+          box-shadow: 20px 22px #0CADC0;
+}
+
+.section4b::after {
+  content: '';
+  width: calc(50% - 50px);
+  background-image: url(../assets/right-image.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 60px;
+  bottom: -60px;
+  right: 0;
+  -webkit-box-shadow: -20px 22px #0CADC0;
+          box-shadow: -20px 22px #0CADC0;
+}
+
+.section5a {
+  background-image: url(../assets/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  max-height: 550px;
+}
+
+.section5b {
+  background-color: #CCEDFB;
+  padding: 250px 0;
+  text-align: center;
+}
+
+.section5b h2, .section5b p {
+  color: #1A315C;
+}
+
+.section5b p {
+  margin: 20px 0;
+}
+
+.section5b button {
+  background-color: #1A315C;
+  color: #FFFFFF;
+  margin: 45px 0;
+}
+
+footer {
+  background-color: #161515;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px 0;
 }
