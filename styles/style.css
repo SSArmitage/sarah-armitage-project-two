@@ -289,7 +289,7 @@ img {
 }
 
 nav a {
-  color: #1A315C;
+  color: #21404F;
   text-transform: uppercase;
 }
 
@@ -314,7 +314,7 @@ header.blogPage {
 header.homePage h1,
 header.blogPage h1 {
   font-family: "Pacifico", cursive;
-  color: #1A315C;
+  color: #21404F;
   font-weight: normal;
   font-size: 5.8rem;
   line-height: 6.8rem;
@@ -413,7 +413,7 @@ header.blogPage h1 {
 }
 
 .section2 {
-  background-color: #1A315C;
+  background-color: #21404F;
   padding: 100px 0;
 }
 
@@ -498,7 +498,7 @@ header.blogPage h1 {
 
 .section4a,
 .section4b {
-  background-color: #1A315C;
+  background-color: #21404F;
   position: relative;
 }
 
@@ -516,7 +516,7 @@ header.blogPage h1 {
 .section4a button,
 .section4b button {
   background-color: #CCEDFB;
-  color: #1A315C;
+  color: #1E1713;
 }
 
 .section4a .box,
@@ -646,6 +646,7 @@ header.blogPage h1 {
 
 .commentsSection h3 {
   padding-bottom: 10px;
+  color: #1A315C;
 }
 
 .blogPost {
@@ -668,7 +669,7 @@ header.blogPage h1 {
 .blogPost .articleWrapper::after {
   content: '';
   width: 60%;
-  background-color: #1A315C;
+  background-color: #21404F;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -745,7 +746,7 @@ main {
 
 aside {
   width: 25%;
-  background-color: #1A315C;
+  background-color: #21404F;
   color: #FFFFFF;
   position: absolute;
   top: 150px;
@@ -753,13 +754,13 @@ aside {
 }
 
 aside .imageContainer {
-  -webkit-box-shadow: -20px 22px #1A315C;
-          box-shadow: -20px 22px #1A315C;
+  -webkit-box-shadow: -20px 22px #21404F;
+          box-shadow: -20px 22px #21404F;
 }
 
 aside .asideText {
-  -webkit-box-shadow: -20px 0 #1A315C;
-          box-shadow: -20px 0 #1A315C;
+  -webkit-box-shadow: -20px 0 #21404F;
+          box-shadow: -20px 0 #21404F;
   padding-bottom: 22px;
 }
 

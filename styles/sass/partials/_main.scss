@@ -19,7 +19,7 @@
         margin: 20px 0 40px 0;
     }
     button {
-        background-color: $secondary;
+        background-color: $secondaryTwo;
         color: $white;
     }
 }
@@ -35,7 +35,7 @@
         box-shadow: -20px 22px $accent;
     }
     .headingTwoA {
-        color: $secondary;
+        color: $secondaryTwo;
     }
 }
 // SECTION2 STYLES
@@ -70,7 +70,7 @@
         }
     }
     .headingTwoA {
-        color: $secondary;
+        color: $secondaryTwo;
     }
     .iconContainer {
         padding: 10px 20px 0 0;
@@ -169,7 +169,7 @@
     }
     button {
         background-color: $primary;
-        color: $secondary;
+        color: $blackOne;
     }
     // .box {
     //     width: 50%;
@@ -251,13 +251,13 @@
     padding: 250px 0;
     text-align: center;
     h2, p {
-        color: $secondary;
+        color: $secondaryTwo;
     }
     p {
         margin: 20px 0;
     }
     button {
-        background-color: $secondary;
+        background-color: $secondaryTwo;
         color: $white;
         margin: 45px 0;
     }
@@ -295,6 +295,7 @@
     }
     h3 {
         padding-bottom: 10px;
+        color: $secondaryTwo;
     }
 }
 
@@ -377,7 +378,7 @@
         resize: none;
     }
     button {
-        background-color: $secondary;
+        background-color: $secondaryTwo;
         color: $white;
     }
 }
