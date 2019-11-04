@@ -20,6 +20,14 @@ fieldset {
     border: none;
 }
 
+input {
+    border: none;
+}
+
+textarea {
+    border: none;
+}
+
 // GENERAL STYLES
 html {
 	font-size: 62.5%;
@@ -50,6 +58,16 @@ nav {
 // h2-versionB
 .headingTwoB {
     @include fontStyle (4.0rem, $fontOne, normal, 5.8rem, 0.25rem);
+}
+
+// h2-versionC
+.headingTwoC {
+    @include fontStyle (4.0rem, $fontOne, normal, normal, 0.43rem);
+}
+
+// h2-versionD
+.headingTwoD {
+    @include fontStyle (3.0rem, $fontOne, normal, normal, 0.29rem);
 }
 
 .wrapper {

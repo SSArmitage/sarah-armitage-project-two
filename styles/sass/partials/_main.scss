@@ -1,3 +1,4 @@
+// ----------- HOME PAGE STYLES ----------
 // SECTION1 STYLES
 .section1 {
     background-color: $primary;
@@ -262,10 +263,154 @@
     }
 }
 
-// FOOTER STYLES
-footer {
-    background-color: $blackTwo;
-    color: $white;
-    text-align: center;
-    padding: 10px 0;
+// -----------  BLOG PAGE STYLES ----------
+.blogBody {
+    background-color: $primary;
 }
+.mainArticle {
+    // background-color: $primary;
+    // z-index: -10;
+}
+
+.mainArticleContent {
+    // background-color: $secondary;
+    color: $white;
+}
+
+.articleWrapper {
+    width: 60%;
+}
+
+.commentsSection {
+    .comment {
+        display: flex;
+        .textContainer {
+            width: 90%;
+            margin-left: 20px;
+            margin-bottom: 80px;
+        }
+    }
+    h2 {
+        padding-bottom: 40px;
+    }
+    h3 {
+        padding-bottom: 10px;
+    }
+}
+
+.blogPost {
+    position: relative;
+    .textContainer {
+        padding: 80px 20px;
+        padding-top: 600px;
+        // z-index: 10;
+    }
+    p:not(.blogDate) {
+        padding: 18px 0;
+    }
+    .blogDate {
+        padding: 10px 0 18px 0;
+    }
+}
+
+.blogPost .articleWrapper::after {
+    content: '';
+    width: 60%;
+    background-color: $secondary;
+    // width: calc(50% - 50px);
+    // background-image: url(../assets/right-image.jpg);
+    // background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    // box-shadow: 20px 22px $accent;
+    border-bottom: 22px solid $accent;
+    box-shadow: 20px 0 $accent;
+}
+
+
+.blogPost::before {
+    content: '';
+    width: 60%;
+    max-height: 650px;
+    // background-color: $secondary;
+    // width: calc(50% - 50px);
+    background-image: url(../assets/blog-post-image.jpg);
+    background-size: cover;
+    position: absolute;
+    top: -150px;
+    bottom: 0;
+    left: 0;
+    box-shadow: 20px 22px $accent;
+}
+
+
+// FORM STYLES
+.commentsSection {
+    padding-top: 50px;
+    margin-bottom: 80px;
+    button {
+        display: block;
+        width: 100%;
+    }
+    .nameEmail {
+        display: flex;
+        justify-content: space-between;
+        input {
+            flex: 1 1 auto;
+            border-bottom: 3px solid $accent;
+            background-color: $primary;
+            padding: 0 0 20px 30px;
+        }
+        input[type="email"] {
+            margin-left: 15px;
+        }
+    }
+    textarea {
+        border: 3px solid $accent;
+        margin: 20px 0;
+        width: 100%;
+        background-color: $primary;
+        padding: 30px 0 0 30px;
+        resize: none;
+    }
+    button {
+        background-color: $secondary;
+        color: $white;
+    }
+}
+
+// ASIDE STYLES
+main {
+    position: relative;
+}
+
+aside {
+    width: 25%;
+    // padding: 20px;
+    background-color: $secondary;
+    // border-bottom: 22px solid $secondary;
+    // box-shadow: -20px 0 $secondary;
+    // padding-bottom: 22px;
+    color: $white;
+    position: absolute;
+    top: 150px;
+    right: 0;
+    .imageContainer {
+        box-shadow: -20px 22px $secondary;
+    }
+    .asideText {
+        // padding: 0 0 22px 20px;
+        box-shadow: -20px 0 $secondary;
+        padding-bottom: 22px;
+    }
+    li::before {
+        content: '•';
+        margin-right: 5px;
+    }
+}
+
+
+
