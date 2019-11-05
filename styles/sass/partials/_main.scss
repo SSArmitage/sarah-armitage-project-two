@@ -267,10 +267,6 @@
 .blogBody {
     background-color: $primary;
 }
-.mainArticle {
-    // background-color: $primary;
-    // z-index: -10;
-}
 
 .mainArticleContent {
     // background-color: $secondary;
@@ -413,5 +409,162 @@ aside {
     }
 }
 
+// -----------  CONTACT PAGE STYLES ----------
+.contactMain {
+    background-color: $primary;
+    // .infoContainer {
 
+    // }
+    .flexContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .social {
+        display: flex;
+        justify-content: space-between;
+        font-size: 2.4rem;
+        padding-bottom: 20px;
+        a {
+            color: $secondaryTwo;
+        }
+    }
+
+    .socialEmail {
+        // display: flex;
+        width: max-content;
+        margin-bottom: 20px;
+    }
+    // .formContainer {
+    //     // max-width: 60%;
+    //     width: 65%;
+    // }
+    form {
+        width: 65%;
+        // width: 850px;
+        // min-width: 500px;
+        background-color: $secondary;
+        position: relative;
+        top: -100px;
+        padding: 50px;
+        box-shadow: 20px 22px $accent;
+        flex: 0  0 auto;
+
+        button {
+        display: block;
+        width: 100%;
+        }
+        .nameEmail {
+            display: flex;
+            justify-content: space-between;
+            // flex-wrap: wrap;
+        }
+        input {
+                flex: 1 1 auto;
+                border-bottom: 3px solid $accent;
+                background-color: $secondary;
+                color: $white;
+                padding: 0 0 20px 30px;
+                margin-bottom: 50px;
+            }
+        input[type="email"] {
+                margin-left: 15px;
+            }
+        textarea {
+            border: 3px solid $accent;
+            color: $white;
+            // margin: 20px 0;
+            width: 100%;
+            background-color: $secondary;
+            padding: 30px 0 0 30px;
+            margin-bottom: 50px;
+            resize: none;
+        }
+        button {
+            background-color: $whiteDark;
+            color: $blackOne;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .contactMain {
+        .nameEmail {
+            flex-direction: column;
+        }
+         form {
+            // position: static;
+            // width: 100%;
+            input[type="email"] {
+            margin-left: 0;
+            }
+        }
+    }    
+}    
+
+@media (max-width: 1080px) {
+    .contactMain {
+        padding: 0 0 50px 0;
+        .flexContainer {
+            flex-direction: column;
+        }
+        .infoContainer {
+            // flex-direction: row;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+        .socialEmail {
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        form {
+            width: 80%;
+        }
+    }
+}
+@media (max-width: 800px) {
+    .contactMain {
+        form {
+            padding: 20px;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .contactMain {
+        .infoContainer {
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .contactMain {
+         .infoContainer {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .socialEmail {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .contactMain {
+        .wrapper {
+            width: 90%;
+        }
+        form {
+            padding: 20px;
+            box-shadow: none;
+        }
+    }
+}
 
