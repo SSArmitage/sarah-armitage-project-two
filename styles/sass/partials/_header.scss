@@ -6,7 +6,6 @@ header.contactPage {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    // max-width: 1280px;
     background-attachment: fixed;
     padding-top: 40px;
     h1 {
@@ -17,8 +16,6 @@ header.contactPage {
         line-height: 6.8rem; 
     }
     .regNav {
-        // width: 45%;
-        // width: 37%;
         ul {
             display: flex;
             justify-content: space-between;
@@ -53,9 +50,6 @@ header.contactPage {
         z-index: 10;
         label {
             color: $accent;
-            // background-color: white;
-            // border-radius: 50%;
-            // padding: 10px 20px;
         }
         input[type="checkbox"] {
             display: none;
@@ -88,7 +82,6 @@ header.contactPage {
         }
         input[type="checkbox"]:checked ~ label[for="toggle"] {
             color: white;
-            // background-color: $secondaryTwo;
         }
     }
 }
@@ -139,9 +132,6 @@ header.contactPage {
         }
         .hamburger {
             display: block;
-            // label {
-            //     color: white;
-            // }
             .hamNav {
             font-size: 4rem;
             width: 100%;
@@ -166,7 +156,6 @@ header.contactPage {
                 width: 100%;
                 right: -100%;
             }
-            // font-size: 5.0rem;
         }
         .hamNav {
             font-size: 5rem;
@@ -179,44 +168,4 @@ header.contactPage {
         }
     }
 }
-
-// -----------------------------------
-
-// header h1 {
-//     font-family: $fontOne;
-//     color: $secondary;
-//     font-weight: normal;
-//     font-size: 5.8rem;
-//     line-height: 6.8rem; 
-//     margin-top: 80px;
-// }
-
-// header {
-//     padding-top: 40px;
-//     nav {
-//         // width: 45%;
-//         width: 37%;
-//         ul {
-//             display: flex;
-//             justify-content: space-between
-//         }
-//     }
-// }
-
-// header {
-//     position: relative;
-//     .imageContainer {
-//         width: 57%;
-//         position: absolute;
-//         left: 0;
-//         bottom: -226px;
-//     }
-// }
-
-
-// .headerTop {
-//     display: flex;
-//     justify-content: space-between
-// }
-
 

@@ -35,19 +35,3 @@ $fontTwo: 'Lato', sans-serif;
    justify-content: center;
    align-items: center; 
 }
-
-
-
-@mixin mq-tablet {
-    @media (max-width: 1023px) {
-        // content placeholder
-        @content;
-    }
-}
-
-@mixin mq-mobile {
-    @media (max-width: 1023px) {
-        // content placeholder
-        @content;
-    }
-}
