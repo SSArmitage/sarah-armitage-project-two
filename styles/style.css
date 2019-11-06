@@ -321,21 +321,33 @@ header.contactPage h1 {
   line-height: 6.8rem;
 }
 
-header.homePage nav,
-header.blogPage nav,
-header.contactPage nav {
-  width: 37%;
-}
-
-header.homePage nav ul,
-header.blogPage nav ul,
-header.contactPage nav ul {
+header.homePage .regNav ul,
+header.blogPage .regNav ul,
+header.contactPage .regNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+header.homePage .regNav li,
+header.blogPage .regNav li,
+header.contactPage .regNav li {
+  padding-left: 55px;
+}
+
+header.homePage .regNav a,
+header.blogPage .regNav a,
+header.contactPage .regNav a {
+  padding-bottom: 8px;
+}
+
+header.homePage .regNav a:hover,
+header.blogPage .regNav a:hover,
+header.contactPage .regNav a:hover {
+  border-bottom: 2px solid #0CADC0;
 }
 
 .headerTop {
@@ -345,6 +357,86 @@ header.contactPage nav ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+header.homePage .hamburger,
+header.blogPage .hamburger,
+header.contactPage .hamburger {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  font-size: 5rem;
+  display: none;
+  z-index: 10;
+}
+
+header.homePage .hamburger label,
+header.blogPage .hamburger label,
+header.contactPage .hamburger label {
+  color: #0CADC0;
+}
+
+header.homePage .hamburger input[type="checkbox"],
+header.blogPage .hamburger input[type="checkbox"],
+header.contactPage .hamburger input[type="checkbox"] {
+  display: none;
+}
+
+header.homePage .hamburger nav,
+header.blogPage .hamburger nav,
+header.contactPage .hamburger nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #1A315C;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 50vh;
+  right: -50%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: -5;
+}
+
+header.homePage .hamburger nav li,
+header.blogPage .hamburger nav li,
+header.contactPage .hamburger nav li {
+  padding-left: 0;
+}
+
+header.homePage .hamburger nav a,
+header.blogPage .hamburger nav a,
+header.contactPage .hamburger nav a {
+  color: #FFFFFF;
+}
+
+header.homePage .hamburger nav a:hover,
+header.blogPage .hamburger nav a:hover,
+header.contactPage .hamburger nav a:hover {
+  border-bottom: 2px solid #0CADC0;
+}
+
+header.homePage .hamburger input[type="checkbox"]:checked + .hamNav,
+header.blogPage .hamburger input[type="checkbox"]:checked + .hamNav,
+header.contactPage .hamburger input[type="checkbox"]:checked + .hamNav {
+  right: 0;
+  /*when the checkbox is checked, put the hamburger nav back to right:0; It was at right:-100%;*/
+}
+
+header.homePage .hamburger input[type="checkbox"]:checked ~ label[for="toggle"],
+header.blogPage .hamburger input[type="checkbox"]:checked ~ label[for="toggle"],
+header.contactPage .hamburger input[type="checkbox"]:checked ~ label[for="toggle"] {
+  color: white;
 }
 
 header.homePage {
@@ -380,6 +472,68 @@ header.contactPage {
 
 header.contactPage h1 {
   margin-top: 125px;
+}
+
+@media (max-width: 1080px) {
+  header.homePage .regNav,
+  header.blogPage .regNav,
+  header.contactPage .regNav {
+    display: none;
+  }
+  header.homePage .hamburger,
+  header.blogPage .hamburger,
+  header.contactPage .hamburger {
+    display: block;
+  }
+  header.homePage .hamburger .hamNav,
+  header.blogPage .hamburger .hamNav,
+  header.contactPage .hamburger .hamNav {
+    font-size: 4rem;
+    width: 100%;
+    right: -100%;
+  }
+  header.homePage .hamburger .hamNav ul,
+  header.blogPage .hamburger .hamNav ul,
+  header.contactPage .hamburger .hamNav ul {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 600px) {
+  header.homePage .hamburger nav,
+  header.blogPage .hamburger nav,
+  header.contactPage .hamburger nav {
+    width: 100%;
+    right: -100%;
+  }
+  header.homePage .hamNav,
+  header.blogPage .hamNav,
+  header.contactPage .hamNav {
+    font-size: 5rem;
+  }
+  header.homePage .hamNav ul,
+  header.blogPage .hamNav ul,
+  header.contactPage .hamNav ul {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .section1 {
@@ -708,6 +862,19 @@ header.contactPage h1 {
           box-shadow: 20px 22px #0CADC0;
 }
 
+.blogBody input[type="email"] {
+  margin-left: 15px;
+}
+
+.blogBody input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border-bottom: 3px solid #0CADC0;
+  background-color: #CCEDFB;
+  padding: 0 0 20px 30px;
+}
+
 .commentsSection {
   padding-top: 50px;
   margin-bottom: 80px;
@@ -725,19 +892,6 @@ header.contactPage h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.commentsSection .nameEmail input {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  border-bottom: 3px solid #0CADC0;
-  background-color: #CCEDFB;
-  padding: 0 0 20px 30px;
-}
-
-.commentsSection .nameEmail input[type="email"] {
-  margin-left: 15px;
 }
 
 .commentsSection textarea {
@@ -926,11 +1080,104 @@ aside li::before {
   .contactMain form {
     width: 80%;
   }
+  .section5b {
+    padding: 150px 0;
+  }
+  .section1 .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section1 .infoContainer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    padding-right: 0;
+    padding-top: 0;
+  }
+  .section1 .imageContainer {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .blogBody aside {
+    display: none;
+  }
+  .blogBody .articleWrapper {
+    width: 100%;
+  }
+  .blogBody .blogPost .articleWrapper::after {
+    width: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: none;
+  }
+  .blogBody .blogPost::before {
+    max-height: 500px;
+  }
+  .blogBody .blogPost .textContainer {
+    padding-top: 450px;
+  }
+}
+
+@media (max-width: 900px) {
+  .section3 ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section3 ul li {
+    width: 100%;
+  }
+  .section2 ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section2 ul li:nth-of-type(2) {
+    margin: 40px 0;
+  }
+  .section2 li {
+    max-width: 70%;
+  }
 }
 
 @media (max-width: 800px) {
   .contactMain form {
     padding: 20px;
+    width: 100%;
+  }
+  .section4a::before,
+  .section4b::after {
+    width: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    max-height: 40vh;
+    top: 0;
+  }
+  .section4a .box,
+  .section4b .box {
+    width: 100%;
+    margin-top: 40vh;
+    padding: 0;
+    padding: 100px 0;
+  }
+  .section4a .flexContainer,
+  .section4b .flexContainer {
+    text-align: center;
+  }
+  .section5b {
+    padding: 50px 0;
+  }
+  header.homePage .imageContainer {
     width: 100%;
   }
 }
@@ -940,6 +1187,31 @@ aside li::before {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .blogBody .nameEmail {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blogBody form input[type="email"] {
+    margin-left: 0;
+  }
+  .blogBody input {
+    margin-top: 15px;
+  }
+  .blogBody .nameEmail {
+    margin-bottom: 20px;
+  }
+  .blogBody .articleWrapper {
+    width: 100%;
+  }
+  .blogBody .blogPost::before {
+    width: 80%;
+  }
+  .blogBody .textContainer {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -959,6 +1231,9 @@ aside li::before {
   .contactMain .socialEmail {
     margin-bottom: 20px;
   }
+  .section2 li {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 560px) {
@@ -969,6 +1244,33 @@ aside li::before {
     padding: 20px;
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+  .blogBody .blogPost::before {
+    max-height: 400px;
+  }
+  .blogBody .blogPost .textContainer {
+    padding-top: 325px;
+  }
+  .section5b {
+    padding: 80px 0;
+  }
+  .section5a {
+    height: 40vh;
+  }
+  .section3 ul {
+    text-align: center;
+  }
+  .section3 ul li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section3 .icon {
+    margin: 0 auto;
+  }
+  .section3 .iconContainer {
+    padding-bottom: 10px;
   }
 }
 

@@ -3,11 +3,9 @@
 header.homePage,
 header.blogPage,
 header.contactPage {
-    // background-image: url(../assets/header-home.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    // height: 90vh;
     // max-width: 1280px;
     background-attachment: fixed;
     padding-top: 40px;
@@ -18,12 +16,21 @@ header.contactPage {
         font-size: 5.8rem;
         line-height: 6.8rem; 
     }
-     nav {
+    .regNav {
         // width: 45%;
-        width: 37%;
+        // width: 37%;
         ul {
             display: flex;
-            justify-content: space-between
+            justify-content: space-between;
+        }
+        li {
+            padding-left: 55px;
+        }
+        a {
+            padding-bottom: 8px;
+        }
+        a:hover {
+            border-bottom: 2px solid $accent;
         }
     }
 }
@@ -32,6 +39,61 @@ header.contactPage {
     display: flex;
     justify-content: space-between;
 }
+
+// ------------ HAMBURGER/CHECKBOX MENU --------------
+header.homePage,
+header.blogPage,
+header.contactPage {
+    .hamburger {
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        font-size: 5rem;
+        display: none;
+        z-index: 10;
+        label {
+            color: $accent;
+            // background-color: white;
+            // border-radius: 50%;
+            // padding: 10px 20px;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+        nav {
+            display: flex;
+            background-color: $secondaryTwo;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            li {
+                padding-left: 0;
+            }
+            a {
+                color: $white;
+            }
+            a:hover {
+            border-bottom: 2px solid $accent;
+            }  
+            position: fixed;
+            top: 0;
+            width: 50%;
+            height: 50vh;
+            right: -50%;
+            transition: all 0.5s;
+            z-index: -5;
+        }
+        input[type="checkbox"]:checked + .hamNav {
+            right: 0;  /*when the checkbox is checked, put the hamburger nav back to right:0; It was at right:-100%;*/
+        }
+        input[type="checkbox"]:checked ~ label[for="toggle"] {
+            color: white;
+            // background-color: $secondaryTwo;
+        }
+    }
+}
+
+ 
 
 // HOME PAGE HEADER STYLES
 header.homePage {
@@ -67,6 +129,56 @@ header.contactPage {
     }
 }
 
+//----------- MEDIA QUERIES --------------
+@media (max-width: 1080px) {
+    header.homePage,
+    header.blogPage,
+    header.contactPage {
+        .regNav {
+            display: none;
+        }
+        .hamburger {
+            display: block;
+            // label {
+            //     color: white;
+            // }
+            .hamNav {
+            font-size: 4rem;
+            width: 100%;
+            right: -100%;
+            ul {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    header.homePage,
+    header.blogPage,
+    header.contactPage {
+        .hamburger {
+            nav {
+                width: 100%;
+                right: -100%;
+            }
+            // font-size: 5.0rem;
+        }
+        .hamNav {
+            font-size: 5rem;
+            ul {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+        }
+    }
+}
 
 // -----------------------------------
 
