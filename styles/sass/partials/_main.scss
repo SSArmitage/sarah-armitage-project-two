@@ -633,3 +633,14 @@ aside {
     }
 }
 
+@media (max-width: 400px) {
+    .contactMain {
+        .wrapper {
+            width: 100%;
+        }
+        form {
+            margin-top: 40px;
+        }
+    }
+}
+

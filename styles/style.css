@@ -1274,6 +1274,15 @@ aside li::before {
   }
 }
 
+@media (max-width: 400px) {
+  .contactMain .wrapper {
+    width: 100%;
+  }
+  .contactMain form {
+    margin-top: 40px;
+  }
+}
+
 footer {
   background-color: #161515;
   color: #FFFFFF;
