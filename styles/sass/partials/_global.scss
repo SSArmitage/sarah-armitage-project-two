@@ -36,6 +36,7 @@ html {
 body {
     // arguments = (fontSize, fontFamily, color, fontWeight, lineHeight, letterSpacing)
     @include fontStyle (2.0rem, $fontTwo, normal, 2.8rem, 0.2rem);
+    // position: relative;
 }
 
 .logo {
@@ -73,7 +74,10 @@ nav {
 .wrapper {
     max-width: 1280px;
     width: 80%;
-	margin: 0 auto;
+    margin: 0 auto;
+    @include forSmallPhone {
+        width: 90%;
+    }
 }
 
 img {

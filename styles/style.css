@@ -283,6 +283,12 @@ nav {
   margin: 0 auto;
 }
 
+@media (max-width: 525px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
 img {
   width: 100%;
   display: block;
@@ -321,6 +327,30 @@ header.contactPage h1 {
   line-height: 6.8rem;
 }
 
+@media (max-width: 900px) {
+  header.homePage h1,
+  header.blogPage h1,
+  header.contactPage h1 {
+    font-size: 4.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header.homePage h1,
+  header.blogPage h1,
+  header.contactPage h1 {
+    font-size: 4.8rem;
+  }
+}
+
+@media (max-width: 340px) {
+  header.homePage h1,
+  header.blogPage h1,
+  header.contactPage h1 {
+    font-size: 4.3rem;
+  }
+}
+
 header.homePage .regNav ul,
 header.blogPage .regNav ul,
 header.contactPage .regNav ul {
@@ -357,14 +387,23 @@ header.contactPage .regNav a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 12vh;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .wrapper {
+  height: 100%;
 }
 
 header.homePage .hamburger,
 header.blogPage .hamburger,
 header.contactPage .hamburger {
   position: fixed;
-  top: 40px;
-  right: 40px;
+  top: 52px;
+  right: 10%;
   font-size: 5rem;
   display: none;
   z-index: 10;
@@ -440,20 +479,52 @@ header.contactPage .hamburger input[type="checkbox"]:checked ~ label[for="toggle
 }
 
 header.homePage {
-  height: 90vh;
+  height: 95vh;
   background-image: url(../assets/header-home.jpg);
   position: relative;
 }
 
 header.homePage h1 {
   margin-top: 80px;
+  position: absolute;
 }
 
 header.homePage .imageContainer {
-  width: 57%;
   position: absolute;
   left: 0;
-  bottom: -226px;
+  right: 0;
+  bottom: -200px;
+  max-width: 700px;
+}
+
+@media (max-width: 600px) {
+  header.homePage .imageContainer {
+    bottom: -150px;
+  }
+}
+
+@media (max-width: 600px) {
+  header.homePage .imageContainer {
+    bottom: -150px;
+  }
+}
+
+@media (max-width: 475px) {
+  header.homePage .imageContainer {
+    bottom: -150px;
+  }
+}
+
+@media (min-width: 750px) {
+  header.homePage .imageContainer {
+    bottom: -200px;
+  }
+}
+
+@media (max-width: 350px) {
+  header.homePage .imageContainer {
+    bottom: -100px;
+  }
 }
 
 header.blogPage {
@@ -508,6 +579,18 @@ header.contactPage h1 {
   }
 }
 
+@media (max-width: 650px) {
+  header .imageContainer {
+    width: 100%;
+  }
+  header .headerImage {
+    width: 100%;
+  }
+  header.homePage .homePageTitle {
+    font: normal;
+  }
+}
+
 @media (max-width: 600px) {
   header.homePage .hamburger nav,
   header.blogPage .hamburger nav,
@@ -538,8 +621,8 @@ header.contactPage h1 {
 
 .section1 {
   background-color: #CCEDFB;
+  padding-top: 20%;
   padding-bottom: 115px;
-  padding-top: 265px;
 }
 
 .section1 .flexContainer {
@@ -549,6 +632,11 @@ header.contactPage h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.section1 .space {
+  width: 100%;
+  height: 12vh;
 }
 
 .section1 .infoContainer {
@@ -1176,9 +1264,6 @@ aside li::before {
   }
   .section5b {
     padding: 50px 0;
-  }
-  header.homePage .imageContainer {
-    width: 100%;
   }
 }
 

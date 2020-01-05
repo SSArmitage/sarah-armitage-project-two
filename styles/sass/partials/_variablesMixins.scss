@@ -35,3 +35,24 @@ $fontTwo: 'Lato', sans-serif;
    justify-content: center;
    align-items: center; 
 }
+@mixin forSmallerScreen {
+  @media (max-width: 475px) { @content;}
+}
+@mixin forSmallPhone {
+    @media (max-width: 525px) { @content; }
+}
+@mixin forPhone {
+    @media (max-width: 600px) { @content; }
+}
+@mixin forTablet {
+    @media (max-width: 900px) { @content; }
+}
+@mixin forSmallDesktop {
+    @media (max-width: 1200px) { @content; }
+}
+@mixin forDesktop {
+    @media (max-width: 1600px) { @content; }
+}
+@mixin forBigDesktop {
+    @media (min-width: 1601px) { @content; }
+}
