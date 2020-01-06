@@ -459,22 +459,25 @@ aside {
     }
     // HOME PAGE
     .section5b {
-        padding: 150px 0;
+        padding: 100px 0;
     }
     .section1 {
         .flexContainer {
-            flex-direction: column;
+            // flex-direction: column;
             align-items: center;
         }
         .infoContainer {
             width: 100%;
             text-align: center;
             margin-bottom: 50px;
-            padding-right: 0;
+            // padding-right: 0;
             padding-top: 0;
         }
         .imageContainer {
-            width: 60%;
+            // width: 60%;
+            @include forSmallPhone {
+                width: 80%;
+            }
         }
     }
 }
@@ -513,14 +516,15 @@ aside {
     }
     .section2 {
         ul {
-            flex-direction: column;
+            // flex-direction: column;
             align-items: center;
             li:nth-of-type(2) {
-                margin: 40px 0;
+                // margin: 40px 0;
+                margin: 0 20px;
             }
         }
         li {
-            max-width: 70%;
+            // max-width: 70%;
         }
     }
 }
@@ -561,6 +565,25 @@ aside {
 }
 
 @media (max-width: 750px) {
+    .section1 {
+        .flexContainer {
+            flex-direction: column;
+            align-items: center;
+        }
+        .infoContainer {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 50px;
+            padding-right: 0;
+            padding-top: 0;
+        }
+        // .imageContainer {
+        //     width: 60%;
+        //     @include forSmallPhone {
+        //         width: 80%;
+        //     }
+        // }
+    }
     // CONTACT PAGE
     .contactMain {
         .infoContainer {
@@ -627,6 +650,19 @@ aside {
             box-shadow: none;
         }
     }
+    .section2 {
+        ul {
+            flex-direction: column;
+            align-items: center;
+            li:nth-of-type(2) {
+                margin: 40px 0;
+                // margin: 0 20px;
+            }
+        }
+        li {
+            // max-width: 70%;
+        }
+    }
     .blogBody {
         .blogPost::before {
             max-height: 400px;
@@ -663,7 +699,7 @@ aside {
 @media (max-width: 400px) {
     .contactMain {
         .wrapper {
-            width: 100%;
+            width: 90%;
         }
         form {
             margin-top: 40px;
