@@ -635,6 +635,9 @@ header.contactPage h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .section1 .space {
@@ -645,7 +648,6 @@ header.contactPage h1 {
 .section1 .infoContainer {
   width: 70%;
   padding-right: 50px;
-  padding-top: 50px;
 }
 
 .section1 .infoContainer p {
@@ -660,6 +662,7 @@ header.contactPage h1 {
 .section1 .imageContainer {
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 22px;
 }
 
 .section1 img {
@@ -1153,7 +1156,6 @@ aside li::before {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    text-align: center;
   }
   .contactMain .socialEmail {
     margin-bottom: 0;
@@ -1181,7 +1183,6 @@ aside li::before {
   }
   .section1 .infoContainer {
     width: 100%;
-    text-align: center;
     margin-bottom: 50px;
     padding-top: 0;
   }
@@ -1277,6 +1278,9 @@ aside li::before {
     margin-bottom: 50px;
     padding-right: 0;
     padding-top: 0;
+  }
+  .section1 .imageContainer {
+    margin-bottom: 0;
   }
   .contactMain .infoContainer {
     -webkit-box-pack: justify;
