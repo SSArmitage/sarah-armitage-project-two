@@ -642,7 +642,12 @@ header.contactPage h1 {
 
 .section1 .space {
   width: 100%;
-  height: 12vh;
+}
+
+@media (max-width: 1080px) {
+  .section1 .space {
+    height: 12vh;
+  }
 }
 
 .section1 .infoContainer {
