@@ -40,7 +40,15 @@ header.contactPage {
             padding-bottom: 8px;
         }
         a:hover {
-            border-bottom: 2px solid $accent;
+            outline: none;
+            color: $accent;
+            border-bottom: 3px solid $accent;
+        }
+        a:focus, a:active {
+            padding: 5px;
+            color: $accent;
+            border-bottom: none;
+            outline: 3px dotted $accent;
         }
     }
 }
@@ -72,15 +80,26 @@ header.contactPage {
         z-index: 10;
         // cursor: pointer;
         label {
+            // background-color: whitesmoke;
+            border-radius: 5px;
             color: $accent;
+            padding: 2px;
             cursor: pointer;
+            &:hover {
+                // background-color: whitesmoke;
+                color: $secondaryTwo;
+            }
+            &:focus {
+                color: $secondaryTwo;
+                outline: 3px dotted $secondaryTwo;
+            }
         }
         input[type="checkbox"] {
             display: none;
         }
         nav {
             display: flex;
-            background-color: $secondary;
+            background-color: $primary;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
@@ -88,10 +107,12 @@ header.contactPage {
                 padding-left: 0;
             }
             a {
-                color: $white;
+                color: $secondaryTwo;
             }
-            a:hover {
-            border-bottom: 2px solid $accent;
+            a:hover, &:focus {
+                color: $accent;
+                border-bottom: 3px solid $accent;
+                // color: $accent;
             }  
             position: fixed;
             top: 0;
@@ -106,7 +127,11 @@ header.contactPage {
             right: 0;  /*when the checkbox is checked, put the hamburger nav back to right:0; It was at right:-100%;*/
         }
         input[type="checkbox"]:checked ~ label[for="toggle"] {
-            color: white;
+            // color: white;
+            color: $accent;
+            &:hover, &:focus {
+                color: $secondaryTwo;
+            }
         }
     }
 }

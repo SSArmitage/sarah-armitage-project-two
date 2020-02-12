@@ -300,7 +300,7 @@ nav a {
 }
 
 button {
-  padding: 10px 40px;
+  padding: 15px 40px;
 }
 
 .lineBreak {
@@ -377,7 +377,20 @@ header.contactPage .regNav a {
 header.homePage .regNav a:hover,
 header.blogPage .regNav a:hover,
 header.contactPage .regNav a:hover {
-  border-bottom: 2px solid #0CADC0;
+  outline: none;
+  color: #0CADC0;
+  border-bottom: 3px solid #0CADC0;
+}
+
+header.homePage .regNav a:focus, header.homePage .regNav a:active,
+header.blogPage .regNav a:focus,
+header.blogPage .regNav a:active,
+header.contactPage .regNav a:focus,
+header.contactPage .regNav a:active {
+  padding: 5px;
+  color: #0CADC0;
+  border-bottom: none;
+  outline: 3px dotted #0CADC0;
 }
 
 .headerTop {
@@ -412,8 +425,23 @@ header.contactPage .hamburger {
 header.homePage .hamburger label,
 header.blogPage .hamburger label,
 header.contactPage .hamburger label {
+  border-radius: 5px;
   color: #0CADC0;
+  padding: 2px;
   cursor: pointer;
+}
+
+header.homePage .hamburger label:hover,
+header.blogPage .hamburger label:hover,
+header.contactPage .hamburger label:hover {
+  color: #1A315C;
+}
+
+header.homePage .hamburger label:focus,
+header.blogPage .hamburger label:focus,
+header.contactPage .hamburger label:focus {
+  color: #1A315C;
+  outline: 3px dotted #1A315C;
 }
 
 header.homePage .hamburger input[type="checkbox"],
@@ -428,7 +456,7 @@ header.contactPage .hamburger nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #21404F;
+  background-color: #CCEDFB;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -458,13 +486,16 @@ header.contactPage .hamburger nav li {
 header.homePage .hamburger nav a,
 header.blogPage .hamburger nav a,
 header.contactPage .hamburger nav a {
-  color: #FFFFFF;
+  color: #1A315C;
 }
 
-header.homePage .hamburger nav a:hover,
+header.homePage .hamburger nav a:hover, header.homePage .hamburger nav:focus,
 header.blogPage .hamburger nav a:hover,
-header.contactPage .hamburger nav a:hover {
-  border-bottom: 2px solid #0CADC0;
+header.blogPage .hamburger nav:focus,
+header.contactPage .hamburger nav a:hover,
+header.contactPage .hamburger nav:focus {
+  color: #0CADC0;
+  border-bottom: 3px solid #0CADC0;
 }
 
 header.homePage .hamburger input[type="checkbox"]:checked + .hamNav,
@@ -477,7 +508,15 @@ header.contactPage .hamburger input[type="checkbox"]:checked + .hamNav {
 header.homePage .hamburger input[type="checkbox"]:checked ~ label[for="toggle"],
 header.blogPage .hamburger input[type="checkbox"]:checked ~ label[for="toggle"],
 header.contactPage .hamburger input[type="checkbox"]:checked ~ label[for="toggle"] {
-  color: white;
+  color: #0CADC0;
+}
+
+header.homePage .hamburger input[type="checkbox"]:checked ~ label[for="toggle"]:hover, header.homePage .hamburger input[type="checkbox"]:checked ~ label[for="toggle"]:focus,
+header.blogPage .hamburger input[type="checkbox"]:checked ~ label[for="toggle"]:hover,
+header.blogPage .hamburger input[type="checkbox"]:checked ~ label[for="toggle"]:focus,
+header.contactPage .hamburger input[type="checkbox"]:checked ~ label[for="toggle"]:hover,
+header.contactPage .hamburger input[type="checkbox"]:checked ~ label[for="toggle"]:focus {
+  color: #1A315C;
 }
 
 header.homePage {
@@ -624,8 +663,9 @@ header.contactPage h1 {
 
 .section1 {
   background-color: #CCEDFB;
-  padding-top: 20%;
+  padding-top: 100px;
   padding-bottom: 115px;
+  position: relative;
 }
 
 .section1 .flexContainer {
@@ -640,16 +680,6 @@ header.contactPage h1 {
           align-items: center;
 }
 
-.section1 .space {
-  width: 100%;
-}
-
-@media (max-width: 1080px) {
-  .section1 .space {
-    height: 12vh;
-  }
-}
-
 .section1 .infoContainer {
   width: 70%;
   padding-right: 50px;
@@ -662,6 +692,11 @@ header.contactPage h1 {
 .section1 .infoContainer button {
   background-color: #1A315C;
   color: #FFFFFF;
+}
+
+.section1 .infoContainer button:hover, .section1 .infoContainer button:focus, .section1 .infoContainer button:active {
+  background-color: #0CADC0;
+  outline: 3px dotted #1A315C;
 }
 
 .section1 .imageContainer {
@@ -786,6 +821,14 @@ header.contactPage h1 {
   color: #1E1713;
 }
 
+.section4a button:hover, .section4a button:focus, .section4a button:active,
+.section4b button:hover,
+.section4b button:focus,
+.section4b button:active {
+  background-color: #0CADC0;
+  outline: 3px dotted #CCEDFB;
+}
+
 .section4a .box,
 .section4b .box {
   padding: 80px 0;
@@ -801,7 +844,7 @@ header.contactPage h1 {
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
 }
 
 .section4a .box {
@@ -865,7 +908,7 @@ header.contactPage h1 {
 
 .section5b {
   background-color: #CCEDFB;
-  padding: 250px 0;
+  padding: 100px 0;
   text-align: center;
 }
 
@@ -880,7 +923,12 @@ header.contactPage h1 {
 .section5b button {
   background-color: #1A315C;
   color: #FFFFFF;
-  margin: 45px 0;
+  margin-top: 45px;
+}
+
+.section5b button:hover, .section5b button:focus, .section5b button:active {
+  background-color: #0CADC0;
+  outline: 3px dotted #1A315C;
 }
 
 .blogBody {
@@ -971,7 +1019,7 @@ header.contactPage h1 {
           flex: 1 1 auto;
   border-bottom: 3px solid #0CADC0;
   background-color: #CCEDFB;
-  padding: 0 0 20px 30px;
+  padding: 0 0 20px 20px;
 }
 
 .commentsSection {
@@ -982,6 +1030,10 @@ header.contactPage h1 {
 .commentsSection button {
   display: block;
   width: 100%;
+}
+
+.commentsSection button:hover {
+  background-color: #0CADC0;
 }
 
 .commentsSection .nameEmail {
@@ -998,7 +1050,7 @@ header.contactPage h1 {
   margin: 20px 0;
   width: 100%;
   background-color: #CCEDFB;
-  padding: 30px 0 0 30px;
+  padding: 20px 0 0 20px;
   resize: none;
 }
 
@@ -1085,11 +1137,19 @@ aside li::before {
   -webkit-box-flex: 0;
       -ms-flex: 0  0 auto;
           flex: 0  0 auto;
+  margin-top: 40px;
 }
 
 .contactMain form button {
   display: block;
   width: 100%;
+  background-color: #C6D9FB;
+  color: #1E1713;
+}
+
+.contactMain form button:hover {
+  background-color: #0CADC0;
+  color: #FFFFFF;
 }
 
 .contactMain form .nameEmail {
@@ -1102,13 +1162,14 @@ aside li::before {
 }
 
 .contactMain form input {
+  width: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   border-bottom: 3px solid #0CADC0;
   background-color: #21404F;
   color: #FFFFFF;
-  padding: 0 0 20px 30px;
+  padding: 0 0 20px 20px;
   margin-bottom: 50px;
 }
 
@@ -1121,14 +1182,9 @@ aside li::before {
   color: #FFFFFF;
   width: 100%;
   background-color: #21404F;
-  padding: 30px 0 0 30px;
+  padding: 20px 0 0 20px;
   margin-bottom: 50px;
   resize: none;
-}
-
-.contactMain form button {
-  background-color: #C6D9FB;
-  color: #1E1713;
 }
 
 @media (max-width: 1300px) {
@@ -1188,7 +1244,6 @@ aside li::before {
   }
   .section1 .infoContainer {
     width: 100%;
-    margin-bottom: 50px;
     padding-top: 0;
   }
 }
@@ -1262,12 +1317,12 @@ aside li::before {
   .section4b .flexContainer {
     text-align: center;
   }
-  .section5b {
-    padding: 50px 0;
-  }
 }
 
 @media (max-width: 750px) {
+  .section1 {
+    padding-bottom: 100px;
+  }
   .section1 .flexContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1331,6 +1386,7 @@ aside li::before {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    text-align: center;
   }
   .contactMain .socialEmail {
     margin-bottom: 20px;
